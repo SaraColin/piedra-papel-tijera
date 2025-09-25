@@ -1,25 +1,28 @@
 import random
+def bienvenida ():
+    saludo1 = ("¡Bienvenido al juego!")
+    saludo2 = ("Prepárate para jugar piedra, papel o tijera...")
+    saludo3 = ("Suerte, y que gane el mejor")
+    print(saludo1)
+    print(saludo2)
+    print(saludo3)
+    nombre = input("\n¿Cuál es tu nombre?: ")
+    print(f"¡Hola, {nombre}! Vamos a comenzar el juego 🪨📄✂️")
+    return nombre
+nombre= bienvenida()
 
-# --- BIENVENIDA E INSTRUCCIONES INICIALES ---
-saludo1 = ("¡Bienvenido al juego!")
-saludo2 = ("Prepárate para jugar piedra, papel o tijera...")
-saludo3 = ("Suerte, y que gane el mejor")
-print(saludo1)
-print(saludo2)
-print(saludo3)
 
-nombre = input("\n¿Cuál es tu nombre?: ")
-print(f"¡Hola, {nombre}! Vamos a comenzar el juego 🪨📄✂️")
-
-# --- SELECCIÓN DE RONDAS ---
-rondas = 0
-while rondas not in [1, 3]:
-    try:
-        rondas = int(input("¿Quieres jugar 1 o 3 rondas?: "))
-        if rondas not in [1, 3]:
-            print("Por favor, elige solo 1 o 3.")
-    except ValueError:
-        print("Eso no es un número. Intenta de nuevo.")
+def rondas_juego():
+    rondas = 0
+    while rondas not in [1, 3]:
+        try:
+            rondas = int(input("¿Quieres jugar 1 o 3 rondas?: "))
+            if rondas not in [1, 3]:
+                print("Por favor, elige solo 1 o 3.")
+        except ValueError:
+            print("Eso no es un número. Intenta de nuevo.")
+    return rondas
+rondas=rondas_juego()
 
 
 # --- PREPARACIÓN DEL JUEGO ---
@@ -34,7 +37,7 @@ for numero_ronda in range(1, rondas + 1):
     print(f"\n--- Ronda {numero_ronda} de {rondas} ---")
     
     # Elección del jugador con validación
-    eleccion_jugador = input("Elige una opción: piedra, papel o tijera\n").lower()
+    eleccion_jugador = input(f"{nombre} Elige una opción: piedra, papel o tijera\n").lower()
     while eleccion_jugador not in opciones_validas:
         print("Opción inválida. Intenta de nuevo.")
         eleccion_jugador = input("Elige piedra, papel o tijera\n").lower()
