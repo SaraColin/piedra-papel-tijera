@@ -25,41 +25,47 @@ def rondas_juego():
 rondas=rondas_juego()
 
 
-# --- PREPARACIÓN DEL JUEGO ---
-opciones_validas = ["piedra", "papel", "tijera"]
-puntos_jugador = 0
-puntos_compu = 0
-empates = 0
+def contador_de_puntos():
+    opciones_validas = ["piedra", "papel", "tijera"]
+    puntos_jugador = 0
+    puntos_compu = 0
+    empates = 0
+    return opciones_validas, puntos_jugador, puntos_compu, empates
+opciones_validas, puntos_jugador, puntos_compu, empates=contador_de_puntos()
 
 
-# --- CICLO PRINCIPAL DEL JUEGO ---
-for numero_ronda in range(1, rondas + 1):
-    print(f"\n--- Ronda {numero_ronda} de {rondas} ---")
+
+def ciclo_de_juego():
+    for numero_ronda in range(1, rondas + 1):
+        print(f"\n--- Ronda {numero_ronda} de {rondas} ---")
+        
+        # Elección del jugador con validación
+        eleccion_jugador = input(f"{nombre} Elige una opción: piedra, papel o tijera\n").lower()
+        while eleccion_jugador not in opciones_validas:
+            print("Opción inválida. Intenta de nuevo.")
+            eleccion_jugador = input("Elige piedra, papel o tijera\n").lower()
+        
+        # Elección de la computadora
+        eleccion_compu = random.choice(opciones_validas)
+        print(f"La computadora eligió: {eleccion_compu}")
+        
+        # Determinar el resultado de la ronda
+        if eleccion_jugador == eleccion_compu:
+            print("¡Empate en esta ronda!")
+            empates += 1
+        elif (
+            (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or
+            (eleccion_jugador == "papel" and eleccion_compu == "piedra") or
+            (eleccion_jugador == "tijera" and eleccion_compu == "papel")
+        ):
+            print(f"¡Ganaste esta ronda, {nombre}!")
+            puntos_jugador += 1
+        else:
+            print(f"Perdiste esta ronda, {nombre}...")
+            puntos_compu += 1
+            return eleccion_jugador, eleccion_compu
+eleccion_jugador, eleccion_compu= ciclo_de_juego()
     
-    # Elección del jugador con validación
-    eleccion_jugador = input(f"{nombre} Elige una opción: piedra, papel o tijera\n").lower()
-    while eleccion_jugador not in opciones_validas:
-        print("Opción inválida. Intenta de nuevo.")
-        eleccion_jugador = input("Elige piedra, papel o tijera\n").lower()
-    
-    # Elección de la computadora
-    eleccion_compu = random.choice(opciones_validas)
-    print(f"La computadora eligió: {eleccion_compu}")
-    
-    # Determinar el resultado de la ronda
-    if eleccion_jugador == eleccion_compu:
-        print("¡Empate en esta ronda!")
-        empates += 1
-    elif (
-        (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or
-        (eleccion_jugador == "papel" and eleccion_compu == "piedra") or
-        (eleccion_jugador == "tijera" and eleccion_compu == "papel")
-    ):
-        print(f"¡Ganaste esta ronda, {nombre}!")
-        puntos_jugador += 1
-    else:
-        print(f"Perdiste esta ronda, {nombre}...")
-        puntos_compu += 1
 
 # --- RESULTADO FINAL DEL JUEGO ---
 print("\n--- ¡Fin del juego! ---")
