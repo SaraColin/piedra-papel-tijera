@@ -30,53 +30,52 @@ def contador_de_puntos():
     puntos_jugador = 0
     puntos_compu = 0
     empates = 0
-    return opciones_validas, puntos_jugador, puntos_compu, empates
-opciones_validas, puntos_jugador, puntos_compu, empates=contador_de_puntos()
-
-
-
-def ciclo_de_juego():
+    
+  # --- CICLO PRINCIPAL DEL JUEGO ---
     for numero_ronda in range(1, rondas + 1):
         print(f"\n--- Ronda {numero_ronda} de {rondas} ---")
-        
-        # Elección del jugador con validación
+
         eleccion_jugador = input(f"{nombre} Elige una opción: piedra, papel o tijera\n").lower()
         while eleccion_jugador not in opciones_validas:
             print("Opción inválida. Intenta de nuevo.")
             eleccion_jugador = input("Elige piedra, papel o tijera\n").lower()
-        
-        # Elección de la computadora
-        eleccion_compu = random.choice(opciones_validas)
-        print(f"La computadora eligió: {eleccion_compu}")
-        
-        # Determinar el resultado de la ronda
-        if eleccion_jugador == eleccion_compu:
-            print("¡Empate en esta ronda!")
-            empates += 1
-        elif (
-            (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or
-            (eleccion_jugador == "papel" and eleccion_compu == "piedra") or
-            (eleccion_jugador == "tijera" and eleccion_compu == "papel")
-        ):
-            print(f"¡Ganaste esta ronda, {nombre}!")
-            puntos_jugador += 1
-        else:
-            print(f"Perdiste esta ronda, {nombre}...")
-            puntos_compu += 1
-            return eleccion_jugador, eleccion_compu
-eleccion_jugador, eleccion_compu= ciclo_de_juego()
-    
+            print(f"Seleccionaste {eleccion_jugador}")
+            print(f"Valor de eleccion comput antes de ejecucion: {eleccion_compu}")
 
-# --- RESULTADO FINAL DEL JUEGO ---
-print("\n--- ¡Fin del juego! ---")
-print(f"Puntuación final:")
-print(f"Puntos de {nombre}: {puntos_jugador}")
-print(f"Puntos de la computadora: {puntos_compu}")
-print(f"Empates: {empates}")
 
-if puntos_jugador > puntos_compu:
-    print(f"\n¡Felicidades, {nombre}! ¡Ganaste el juego! 🎉")
-elif puntos_jugador < puntos_compu:
-    print(f"\nLo siento, {nombre}, perdiste el juego... 😢")
-else:
-    print("\n¡El juego terminó en empate! 🤝")
+         # Elección de la computadora
+            eleccion_compu = random.choice(opciones_validas)
+            print(f"La computadora eligió: {eleccion_compu}")
+        
+         # Determinar el resultado de la ronda
+            if eleccion_jugador == eleccion_compu:
+                print("¡Empate en esta ronda!")
+                empates += 1
+            elif (
+                (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or
+                (eleccion_jugador == "papel" and eleccion_compu == "piedra") or
+                (eleccion_jugador == "tijera" and eleccion_compu == "papel")
+            ):
+                print(f"¡Ganaste esta ronda, {nombre}!")
+                puntos_jugador += 1
+            else:
+                print(f"Perdiste esta ronda, {nombre}...")
+                puntos_compu += 1
+    return opciones_validas, puntos_jugador, puntos_compu, empates, eleccion_jugador, eleccion_compu
+opciones_validas, puntos_jugador, puntos_compu, empates, eleccion_jugador, eleccion_compu=contador_de_puntos()
+
+
+def parte_final_del_juego():
+    print("\n--- ¡Fin del juego! ---")
+    print(f"Puntuación final:")
+    print(f"Puntos de {nombre}: {puntos_jugador}")
+    print(f"Puntos de la computadora: {puntos_compu}")
+    print(f"Empates: {empates}")
+
+    if puntos_jugador > puntos_compu:
+        print(f"\n¡Felicidades, {nombre}! ¡Ganaste el juego! 🎉")
+    elif puntos_jugador < puntos_compu:
+        print(f"\nLo siento, {nombre}, perdiste el juego... 😢")
+    else:
+        print("\n¡El juego terminó en empate! 🤝")
+parte_final_del_juego()
