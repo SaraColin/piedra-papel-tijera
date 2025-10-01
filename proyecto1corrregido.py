@@ -10,4 +10,7 @@ def dar_opciones():
     print(input(f"tienes que elegir una de las siguientes opciones: {opciones}"))
 dar_opciones()
 
-
+def turno_compu():
+    eleccion_compu= random.choice(dar_opciones)
+    print(eleccion_compu)
+turno_compu()
