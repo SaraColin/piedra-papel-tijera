@@ -14,3 +14,13 @@ def turno_compu():
     eleccion_compu= random.choice(dar_opciones)
     print(eleccion_compu)
 turno_compu()
+def verificar(eleccion_compu):
+    eleccion_jugador = input("Elige una opción: piedra, papel o tijera\n")
+    if eleccion_jugador == eleccion_compu:
+        print("¡Es un empate!")
+    elif (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or \
+        (eleccion_jugador == "tijera" and eleccion_compu == "papel") or \
+        (eleccion_jugador == "papel" and eleccion_compu == "piedra"):
+        print("¡Ganaste!")
+    else:
+        print("¡Perdiste!")
