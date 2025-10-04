@@ -5,6 +5,10 @@ def saludar_usuario():
     print(f"hola {nombre}, tendras que escoger una de las siguientes opciones  e intentar ganarme. intentalo, tal vez corras con suerte... ")
 saludar_usuario()
 
+def preguntar_rondas():
+    print(input("¿quieres jugar 1 o 3 rondas?"))
+preguntar_rondas()
+
 def dar_opciones():
     opciones=["piedra", "papel", "tijera"]
     print(input(f"tienes que elegir una de las siguientes opciones: {opciones}"))
