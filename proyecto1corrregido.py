@@ -4,27 +4,23 @@ def saludar_usuario():
     nombre=input(" ¿cual es tu nombre?:") 
     print(f"hola {nombre}, tendras que escoger una de las siguientes opciones  e intentar ganarme. intentalo, tal vez corras con suerte... ")
 saludar_usuario()
+def seleccionar_rondas():
+    while True:
+        respuesta = input("¿Quieres jugar 1 o 3 rondas? Escribe el número: ")
 
-def preguntar_rondas():
-    print(input("¿quieres jugar 1 o 3 rondas?"))
-preguntar_rondas()
+        if respuesta == '1' or respuesta == '3':
+            rondas = int(respuesta)
+            return rondas
+        else:
+            print("Error: Opción inválida. Por favor, escribe solo '1' o '3'.")
+
+
+numero_de_rondas = seleccionar_rondas()
+
+
 
 def dar_opciones():
     opciones=["piedra", "papel", "tijera"]
     print(input(f"tienes que elegir una de las siguientes opciones: {opciones}"))
 dar_opciones()
-
-def turno_compu():
-    eleccion_compu= random.choice(dar_opciones)
-    print(eleccion_compu)
-turno_compu()
-def verificar(eleccion_compu):
-    eleccion_jugador = input("Elige una opción: piedra, papel o tijera\n")
-    if eleccion_jugador == eleccion_compu:
-        print("¡Es un empate!")
-    elif (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or \
-        (eleccion_jugador == "tijera" and eleccion_compu == "papel") or \
-        (eleccion_jugador == "papel" and eleccion_compu == "piedra"):
-        print("¡Ganaste!")
-    else:
-        print("¡Perdiste!")
+#correccion de estas funciones pendiente
