@@ -15,14 +15,22 @@ def seleccionar_rundas():#repasar
             print("debes de elegir solo la opcion 1 o 3")
 seleccionar_rundas()
 
-def dar_opciones():
+def dar_opciones():#repasar
     opciones=["piedra", "papel", "tijera"]
-    print(input(f"tienes que elegir una de las siguientes opciones: {opciones}"))
-
+    eleccion_jugador=input(f"tienes que elegir una de las siguientes opciones: {opciones}")
+    eleccion_compu=random.choice(opciones)
+    print(f"Tú elegiste: {eleccion_jugador}")
+    print(f"La computadora eligió: {eleccion_compu}")
     
-    print(f"la computadora  elegio {eleccion}")
-    eleccion=opciones
-    
-    eleccion=random.choice(opciones)
+    if eleccion_jugador==eleccion_compu:
+        print("es un empate!!!")
+    elif (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or \
+        (eleccion_jugador == "tijera" and eleccion_compu == "papel") or \
+        (eleccion_jugador == "papel" and eleccion_compu == "piedra"):
+        print("¡Ganaste!")
+    else:
+        print("¡Perdiste!")
+        
 dar_opciones()
+
 
