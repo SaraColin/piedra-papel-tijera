@@ -6,13 +6,12 @@ def saludar_usuario():
 saludar_usuario()
 def seleccionar_rundas():#repasar
     while True:
-        respuesta=input("¿cuantas rondas quieres jugar, 1 o 3? escribe tu respuesta:")
-        
+        respuesta=input("¿cuantas rondas quieres jugar, 1 o 3?")
         if respuesta=='1' or respuesta=='3':
             resultado=int(respuesta)
             return resultado
-        else:
-            print("debes de elegir solo la opcion 1 o 3")
+        else :
+            print("por favor, soslo elije 1 o 3")
 seleccionar_rundas()
 
 def dar_opciones():#repasar
@@ -22,7 +21,7 @@ def dar_opciones():#repasar
     print(f"Tú elegiste: {eleccion_jugador}")
     print(f"La computadora eligió: {eleccion_compu}")
     
-    if eleccion_jugador==eleccion_compu:
+    if eleccion_jugador==eleccion_compu:#volver a hacerlo
         print("es un empate!!!")
     elif (eleccion_jugador == "piedra" and eleccion_compu == "tijera") or \
         (eleccion_jugador == "tijera" and eleccion_compu == "papel") or \
