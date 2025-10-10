@@ -4,7 +4,7 @@ def saludar_usuario():
     nombre=input(" ¿cual es tu nombre?:") 
     print  (f"hola {nombre}, tendras que escoger una de las siguientes opciones  e intentar ganarme. intentalo, tal vez corras con suerte... ")
 saludar_usuario()
-def seleccionar_rundas():#repasar
+def seleccionar_rundas():#hacer que tenga la funcion de jugar tres partidas
     while True:
         respuesta=input("¿cuantas rondas quieres jugar, 1 o 3?")
         if respuesta=='1' or respuesta=='3':
