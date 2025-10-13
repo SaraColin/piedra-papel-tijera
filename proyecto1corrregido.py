@@ -3,7 +3,7 @@ import random
 def saludar_usuario():
    print("hola, bienvenido al juego de piedra papel o tijeras")
    nombres=input("ingresa tu nombre por favor:")
-   print(f"ok {nombres}, tenfras que seleccionar uno de los siguienets opciones, pero antes...")
+   print(f"perfecto {nombres}!!, ahora tendrás que seleccionar uno de los siguienets opciones, pero antes...")
 saludar_usuario()
 
 
@@ -14,7 +14,7 @@ def seleccionar_rundas():#hacer que tenga la funcion de jugar tres partidas
             resultado=int(respuesta)
             return resultado
         else :
-            print("porfavor, vuelve a intentarlos, solo puedes elegir 1 o 3")
+            print("porfavor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opcion")
 seleccionar_rundas()
 
  
