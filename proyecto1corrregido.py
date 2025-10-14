@@ -7,15 +7,47 @@ def saludar_usuario():
 saludar_usuario()
 
 
-def seleccionar_rundas():#hacer que tenga la funcion de jugar tres partidas
+def seleccionar_rundas():
+    """
+    Pregunta al usuario si quiere jugar 1 o 3 rondas, valida la entrada
+    y devuelve el número de rondas como un entero.
+    """
     while True:
-        respuesta=input("¿cuantas rondas quieres jugar, 1 o 3?")
-        if respuesta=='1' or respuesta=='3':
-            resultado=int(respuesta)
+        respuesta = input("¿Cuántas rondas quieres jugar, 1 o 3? ")
+        if respuesta == '1' or respuesta == '3':
+            resultado = int(respuesta)
             return resultado
-        else :
-            print("porfavor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opcion")
-seleccionar_rundas()
+        else:
+            print("Por favor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opción.")
+
+def jugar():
+    """
+    Función principal que controla el flujo del juego.
+    """
+    print("¡Bienvenido al juego!")
+    
+    # PASO 1: Llamamos a tu función para saber cuántas rondas jugar.
+    rondas_totales = seleccionar_rundas()
+    
+    print(f"¡Perfecto! Jugaremos {rondas_totales} ronda(s).")
+    
+    # PASO 2: Creamos un bucle que se repite el número de veces elegido.
+    # Usamos 'range(1, rondas_totales + 1)' para que cuente desde 1 (Ronda 1, Ronda 2...)
+    for ronda_actual in range(1, rondas_totales + 1):
+        print(f"\n--- Empezando Ronda {ronda_actual} de {rondas_totales} ---")
+        
+        # PASO 3: Aquí dentro iría la lógica de una sola partida.
+        # Por ejemplo: pedir la jugada, determinar el ganador, etc.
+        # Por ahora, solo es un mensaje de ejemplo.
+        print("... Jugando la ronda ...")
+        print("¡Ronda terminada!")
+
+    # PASO 4: Este mensaje se muestra cuando el bucle 'for' ha terminado.
+    print("\n¡Juego terminado! Gracias por jugar.")
+
+# --- Iniciar el juego ---
+# Esta línea llama a la función principal para que todo comience.
+jugar()
 
  
 
