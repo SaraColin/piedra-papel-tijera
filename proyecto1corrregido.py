@@ -21,26 +21,18 @@ def seleccionar_rundas():
             print("Por favor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opción.")
 
 def jugar():
-    """
-    Función principal que controla el flujo del juego.
-    """
-    print("¡Bienvenido al juego!")
     
-    # PASO 1: Llamamos a tu función para saber cuántas rondas jugar.
+    #Llamamos a tu función para saber cuántas rondas jugar.
     rondas_totales = seleccionar_rundas()
     
-    print(f"¡Perfecto! Jugaremos {rondas_totales} ronda(s).")
+    print(f"Jugaremos {rondas_totales}")
     
-    # PASO 2: Creamos un bucle que se repite el número de veces elegido.
+    # Creamos un bucle que se repite el número de veces elegido.
     # Usamos 'range(1, rondas_totales + 1)' para que cuente desde 1 (Ronda 1, Ronda 2...)
     for ronda_actual in range(1, rondas_totales + 1):
-        print(f"\n--- Empezando Ronda {ronda_actual} de {rondas_totales} ---")
+        print(f"\nEmpezando Ronda {ronda_actual} de {rondas_totales}")
         
-        # PASO 3: Aquí dentro iría la lógica de una sola partida.
-        # Por ejemplo: pedir la jugada, determinar el ganador, etc.
-        # Por ahora, solo es un mensaje de ejemplo.
-        print("... Jugando la ronda ...")
-        print("¡Ronda terminada!")
+
 
     # PASO 4: Este mensaje se muestra cuando el bucle 'for' ha terminado.
     print("\n¡Juego terminado! Gracias por jugar.")
