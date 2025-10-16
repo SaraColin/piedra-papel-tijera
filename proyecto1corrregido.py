@@ -8,10 +8,7 @@ saludar_usuario()
 
 
 def seleccionar_rundas():
-    """
-    Pregunta al usuario si quiere jugar 1 o 3 rondas, valida la entrada
-    y devuelve el número de rondas como un entero.
-    """
+  
     while True:
         respuesta = input("¿Cuántas rondas quieres jugar, 1 o 3? ")
         if respuesta == '1' or respuesta == '3':
@@ -40,7 +37,7 @@ def jugar():
 # --- Iniciar el juego ---
 # Esta línea llama a la función principal para que todo comience.
 jugar()
-
+# esta linea , bueno, este codigo no funciona, solos e puede jugar una partida y deben de podere jugarse las tres o solo una, asi que tengo que hacer una funcion parapoder poner la opcion de jugar mas de una sola partida.
  
 
 def dar_opciones():#repasar
