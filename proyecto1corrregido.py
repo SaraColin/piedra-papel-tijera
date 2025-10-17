@@ -16,29 +16,7 @@ def seleccionar_rundas():
             return resultado
         else:
             print("Por favor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opción.")
-
-def jugar():
-    
-    #Llamamos a tu función para saber cuántas rondas jugar.
-    rondas_totales = seleccionar_rundas()
-    
-    print(f"Jugaremos {rondas_totales}")
-    
-    # Creamos un bucle que se repite el número de veces elegido.
-    # Usamos 'range(1, rondas_totales + 1)' para que cuente desde 1 (Ronda 1, Ronda 2...)
-    for ronda_actual in range(1, rondas_totales + 1):
-        print(f"\nEmpezando Ronda {ronda_actual} de {rondas_totales}")
-        
-
-
-    # PASO 4: Este mensaje se muestra cuando el bucle 'for' ha terminado.
-    print("\n¡Juego terminado! Gracias por jugar.")
-
-# --- Iniciar el juego ---
-# Esta línea llama a la función principal para que todo comience.
-jugar()
-# esta linea , bueno, este codigo no funciona, solos e puede jugar una partida y deben de podere jugarse las tres o solo una, asi que tengo que hacer una funcion parapoder poner la opcion de jugar mas de una sola partida.
- 
+#se elimin[o la funcion de poder jugar con mas de una partida, asi que tengo que hacer una nueva y que si funcione]
 
 def dar_opciones():#repasar
     opciones=["piedra", "papel", "tijera"]
