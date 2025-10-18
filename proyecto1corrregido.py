@@ -1,10 +1,6 @@
 import random
 
-def saludar_usuario():
-   print("hola, bienvenido al juego de piedra papel o tijeras")
-   nombres=input("ingresa tu nombre por favor:")
-   print(f"perfecto {nombres}!!, ahora tendrás que seleccionar uno de los siguienets opciones, pero antes...")
-saludar_usuario()
+def sal
 
 
 def seleccionar_rundas():
