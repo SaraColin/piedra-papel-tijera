@@ -1,8 +1,5 @@
 import random
 
-def sal
-
-
 def seleccionar_rundas():
   
     while True:
