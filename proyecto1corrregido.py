@@ -1,4 +1,4 @@
-import random
+import ra
 
 def seleccionar_rundas():
   
@@ -11,6 +11,6 @@ def seleccionar_rundas():
             print("Por favor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opción.")
 #se elimin[o la funcion de poder jugar con mas de una partida, asi que tengo que hacer una nueva y que si funcione]
 
-#termin\ar funciones, vover a hacer toda la logica en 20 minutos maximo
+#termin\ar funciones, vover a hacer toda la logica en 20 minutes max
 
 
