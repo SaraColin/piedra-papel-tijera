@@ -1,14 +1,14 @@
 import ra
 
-def seleccionar_rundas():
+def seleccionar_rdas():
   
-    while True:
+    while True
         respuesta = input("¿Cuántas rondas quieres jugar, 1 o 3? ")
         if respuesta == '1' or respuesta == '3':
             resultado = int(respuesta)
             return resultado
-        else:
-            print("Por favor, vuelve a intentarlo, solo puedes elegir 1 o 3 como opción.")
+        els
+            print("Por favor, vuelve a intentarlooooooo
 #se elimin[o la funcion de poder jugar con mas de una partida, asi que tengo que hacer una nueva y que si funcione]
 
 #termin\ar funciones, vover a hacer toda la logica en 20 minutes max
