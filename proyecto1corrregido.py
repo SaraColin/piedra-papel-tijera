@@ -6,4 +6,6 @@ def saludar():
 saludar()
 
 def contar_rontas():
-    numero_rondas=input("cuantas rondas quires jugar?")
+    numero_rondas=input("cuantas rondas quires jugar? 1 o 3: ")
+    print(f"perfecto, jugaremos{numero_rondas} rondas.")
+contar_rontas()
