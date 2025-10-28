@@ -9,3 +9,8 @@ def contar_rontas():
     numero_rondas=input("cuantas rondas quires jugar? 1 o 3: ")
     print(f"perfecto, jugaremos{numero_rondas} rondas.")
 contar_rontas()
+ 
+def dar_opciones():
+    opciones=['piedra', 'papel', 'tijerss']
+    print(input(f"elige una de las siguientes opciones: {opciones}"))
+dar_opciones()
