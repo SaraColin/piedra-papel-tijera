@@ -14,3 +14,7 @@ def dar_opciones():
     opciones=['piedra', 'papel', 'tijerss']
     print(input(f"elige una de las siguientes opciones: {opciones}"))
 dar_opciones()
+
+def contar_puntos():
+     if puntos_compu==1
+        print("compu ha perdido")
