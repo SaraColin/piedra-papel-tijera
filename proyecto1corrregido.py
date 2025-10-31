@@ -2,19 +2,15 @@ import random
 def saludar():
     print("bienvenido al juego de piedra, papel o tijeras")
     nombre_usuario=input("ingresa tu nombre por favor:")
-    print(f"muy bien {nombre_usuario}, has tu mejor esfuerzo por ganarme, pero lo dudo... nadie lo ha hecho")
+    print(f"muy bien {nombre_usuario}, has tu mejor esfuerzo por ganarme, pero lllo dudo... nadie lo ha hecho")
 saludar()
 
 def contar_rontas():
-    numero_rondas=input("cuantas rondas quires jugar? 1 o 3: ")
+    numero_rondas=input("ccuantasas rondas quires jugar? 1 o 3: ")
     print(f"perfecto, jugaremos{numero_rondas} rondas.")
 contar_rontas()
  
 def dar_opciones():
     opciones=['piedra', 'papel', 'tijerss']
     print(input(f"elige una de las siguientes opciones: {opciones}"))
-dar_opciones()
-def contar_puntajes():
-    puntos_compu=[]
-    puntos_yo=[]
-    if puntos_compu>=puntos_yo
+d
