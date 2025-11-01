@@ -12,5 +12,5 @@ contar_rontas()
  
 def dar_opciones():
     opciones=['piedra', 'papel', 'tijerss']
-    print(input(f"elige una de las siguientes opciones: {opciones}"))
-d
+    print(input(f"elige uns dr las siguientes opciones: {opciones}"))
+dar_opciones()
